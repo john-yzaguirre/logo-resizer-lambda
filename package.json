@@ -38,7 +38,6 @@
     "@types/node": "^14",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
-    "aws-cdk-lib": "2.1.0",
     "constructs": "10.0.5",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.6",
@@ -61,6 +60,11 @@
     "aws-cdk-lib": "^2.1.0",
     "constructs": "^10.0.5"
   },
+  "dependencies": {
+    "@aws-cdk/aws-apigatewayv2-alpha": "2.59.0-alpha.0",
+    "@aws-cdk/aws-apigatewayv2-integrations-alpha": "2.59.0-alpha.0",
+    "aws-cdk-lib": "2.59.0"
+  },
   "keywords": [
     "cdk"
   ],
@@ -70,7 +74,8 @@
   "jest": {
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.ts?(x)",
-      "<rootDir>/(test|src)/**/*(*.)@(spec|test).ts?(x)"
+      "<rootDir>/(test|src)/**/*(*.)@(spec|test).ts?(x)",
+      "**/?(*.)@(spec|test).[tj]s?(x)"
     ],
     "clearMocks": true,
     "collectCoverage": true,
@@ -108,7 +113,7 @@
     }
   },
   "types": "lib/index.d.ts",
-  "stability": "stable",
+  "stability": "experimental",
   "jsii": {
     "outdir": "dist",
     "targets": {},
